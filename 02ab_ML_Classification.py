@@ -98,13 +98,14 @@ EARLY_STOPPING_ROUNDS = 200
 CATEGORICAL_BASE_COLUMNS = ["unit_kind", "generation", "mating_type"]
 
 # Optional: known binary feature base names (neighbor-expanded variants will be handled as numeric)
-BINARY_BASE_COLUMNS = ["has_frameshift", "has_stop_gained", "has_start_lost", "has_splice_disrupt"]
+BINARY_BASE_COLUMNS = ["has_frameshift", "has_stop_gained", "has_start_lost", "has_splice_disrupt", "has_LOF",
+    "has_NMD",]
 
 # Categorical missing value placeholder (string)
 CAT_MISSING_TOKEN = "__MISSING__"
 
 
-CLASSIFICATION_TARGETS_old: List[str] = [
+CLASSIFICATION_TARGETS: List[str] = [
     "combined_q50",
     "cellulase_q50",
     "xylanase_q50",
@@ -116,7 +117,7 @@ CLASSIFICATION_TARGETS_old: List[str] = [
     "xylanase_q20",
 ]
 
-CLASSIFICATION_TARGETS: List[str] = [
+CLASSIFICATION_TARGETS_add: List[str] = [
     "cellulase_q33",
     "cellulase_q25",
     "cellulase_q20",

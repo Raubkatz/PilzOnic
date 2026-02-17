@@ -1,0 +1,3 @@
+conda create -n MyPilz python=3.11
+conda activate MyPilz
+pip install pandas numpy scikit-learn catboost seaborn
